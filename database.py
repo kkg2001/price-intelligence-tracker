@@ -1,7 +1,7 @@
 import sqlite3
 from config import settings
 
-DB_FILE = settings.database_file
+DB_FILE = "price_intelligence.db"
 
 def get_connection():
     return sqlite3.connect(DB_FILE)
