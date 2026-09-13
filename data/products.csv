@@ -1,0 +1,21 @@
+product_id,product_name,brand,category,current_price
+P001,MacBook Air M4,Apple,Laptop,89999
+P002,MacBook Pro M4,Apple,Laptop,149999
+P003,ThinkPad E14,Lenovo,Laptop,72999
+P004,Dell XPS 13,Dell,Laptop,104999
+P005,Galaxy S25,Samsung,Smartphone,74999
+P006,iPhone 17,Apple,Smartphone,79999
+P007,Pixel 10,Google,Smartphone,69999
+P008,OnePlus 14,OnePlus,Smartphone,59999
+P009,Galaxy Tab S11,Samsung,Tablet,64999
+P010,iPad Air M3,Apple,Tablet,67999
+P011,Sony WH-1000XM6,Sony,Headphones,29999
+P012,Bose QuietComfort Ultra,Bose,Headphones,27999
+P013,AirPods Pro 3,Apple,Earbuds,24999
+P014,Sony WF-1000XM6,Sony,Earbuds,22999
+P015,Apple Watch Series 11,Apple,Smartwatch,44999
+P016,Galaxy Watch 8,Samsung,Smartwatch,34999
+P017,Kindle Paperwhite,Amazon,E-reader,14999
+P018,GoPro Hero 14,GoPro,Camera,44999
+P019,DJI Mini 5,DJI,Drone,89999
+P020,Logitech MX Master 4,Logitech,Accessories,9999

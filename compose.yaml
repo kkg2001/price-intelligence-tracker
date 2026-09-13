@@ -1,0 +1,56 @@
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+
+    container_name: price-intelligence-api
+
+    ports:
+      - "8000:8000"
+
+    secrets:
+      - groq_api_key
+
+    volumes:
+      - ./data:/app/data
+      - ./price_intelligence.db:/app/price_intelligence.db
+      - ./chroma_db:/app/chroma_db
+
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+    restart: unless-stopped
+
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+
+    container_name: price-intelligence-ui
+
+    ports:
+      - "8501:8501"
+
+    environment:
+      PRICE_INTELLIGENCE_API_URL: http://api:8000
+
+    depends_on:
+      api:
+        condition: service_healthy
+
+    volumes:
+      - ./data:/app/data
+
+    restart: unless-stopped
+
+secrets:
+
+  groq_api_key:
+    file: ./secrets/groq_api_key.txt
