@@ -624,9 +624,3 @@ Add:
 
 Integrate external product/price APIs to replace the current sample price dataset with continuously updated pricing information.
 
-
----
-
-## 📄 License
-
-This project is intended for learning, experimentation, and portfolio demonstration.
