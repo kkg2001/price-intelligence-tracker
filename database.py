@@ -1,5 +1,4 @@
 import sqlite3
-from config import settings
 
 DB_FILE = "price_intelligence.db"
 
